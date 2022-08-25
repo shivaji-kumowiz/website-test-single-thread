@@ -1,5 +1,6 @@
 from selenium import webdriver
 import logging
+import time
 
 
 class WebsiteSelenium:
@@ -64,8 +65,12 @@ def recurse_check(url):
 
 
 if __name__ == "__main__":
+        start = time.time()
+
     visited_page_urls = recurse_check(url="https://www.dgraph.io")
     logging.info("\n\n**********\n\n")
     logging.info("routes:")
     for key, value in visited_page_urls.items():
         logging.info(key)
+    end = time.time()
+    my_logger.info("The time of execution of above program is :" + str( (end - start)/60))
