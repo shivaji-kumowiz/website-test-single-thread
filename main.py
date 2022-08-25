@@ -65,8 +65,7 @@ def recurse_check(url):
 
 
 if __name__ == "__main__":
-        start = time.time()
-
+    start = time.time()
     visited_page_urls = recurse_check(url="https://www.dgraph.io")
     logging.info("\n\n**********\n\n")
     logging.info("routes:")
